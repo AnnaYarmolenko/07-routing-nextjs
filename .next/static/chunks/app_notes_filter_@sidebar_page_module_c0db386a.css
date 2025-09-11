@@ -1,0 +1,26 @@
+/* [project]/app/notes/filter/@sidebar/page.module.css [app-client] (css) */
+.page-module__RL9qBa__menuList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.page-module__RL9qBa__menuItem {
+  margin-bottom: 16px;
+}
+
+.page-module__RL9qBa__menuLink {
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  display: block;
+}
+
+.page-module__RL9qBa__menuLink:hover {
+  color: #ddd;
+  background-color: #444;
+}
+
+/*# sourceMappingURL=app_notes_filter_%40sidebar_page_module_c0db386a.css.map*/

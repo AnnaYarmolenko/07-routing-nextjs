@@ -1,0 +1,23 @@
+/* [project]/app/notes/filter/layout.module.css [app-client] (css) */
+.layout-module__p5XwcW__container {
+  flex-direction: row;
+  height: 100vh;
+  display: flex;
+}
+
+.layout-module__p5XwcW__sidebar {
+  color: #fff;
+  background-color: #2c2c2c;
+  border-right: 1px solid #ddd;
+  flex-direction: column;
+  width: 250px;
+  height: 100vh;
+  padding: 16px;
+  display: flex;
+}
+
+.layout-module__p5XwcW__notesWrapper {
+  width: 100%;
+}
+
+/*# sourceMappingURL=app_notes_filter_layout_module_b5a4474a.css.map*/

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/notes/filter/layout.module.css [app-rsc] (css module)"],"sourcesContent":["__turbopack_context__.v({\n  \"container\": \"layout-module__p5XwcW__container\",\n  \"notesWrapper\": \"layout-module__p5XwcW__notesWrapper\",\n  \"sidebar\": \"layout-module__p5XwcW__sidebar\",\n});\n"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA"}},
+    {"offset": {"line": 12, "column": 0}, "map": {"version":3,"sources":["file:///Users/anna_yarmolenko/IT/Next/HW/07-routing-nextjs/app/notes/filter/layout.tsx"],"sourcesContent":["import { Suspense } from 'react';\nimport css from './layout.module.css';\n\n\nexport default function FilterLayout({\n  children,\n  sidebar,\n}: Readonly<{\n  children: React.ReactNode;\n  sidebar: React.ReactNode;\n}>) {\n  return (\n    <div className={css.container}>\n      <aside className={css.sidebar}>\n        <Suspense fallback={<div>Loading sidebar...</div>}>\n          {sidebar}\n        </Suspense>\n      </aside>\n      <main className={css.notesWrapper}>\n        {children}\n      </main>\n    </div>\n  );\n}"],"names":[],"mappings":";;;;;AAAA;AACA;;;;AAGe,SAAS,aAAa,EACnC,QAAQ,EACR,OAAO,EAIP;IACA,qBACE,8OAAC;QAAI,WAAW,uJAAG,CAAC,SAAS;;0BAC3B,8OAAC;gBAAM,WAAW,uJAAG,CAAC,OAAO;0BAC3B,cAAA,8OAAC,iNAAQ;oBAAC,wBAAU,8OAAC;kCAAI;;;;;;8BACtB;;;;;;;;;;;0BAGL,8OAAC;gBAAK,WAAW,uJAAG,CAAC,YAAY;0BAC9B;;;;;;;;;;;;AAIT","debugId":null}}]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/anna_yarmolenko/IT/Next/HW/07-routing-nextjs/components/NoteModal/NoteModal.tsx"],"sourcesContent":["'use client';\n\nimport { useRouter } from 'next/navigation';\n\ntype Props = {\n  children: React.ReactNode;\n};\n\nexport default function NoteModal({ children }: Props) {\n  const router = useRouter();\n  \n  const close = () => router.back();\n\n  return (\n    <div>\n      <div>\n        {children}\n        <button onClick={close}>Close</button>\n      </div>\n    </div>\n  );\n};\n"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAQe,SAAS,UAAU,EAAE,QAAQ,EAAS;IACnD,MAAM,SAAS,IAAA,+IAAS;IAExB,MAAM,QAAQ,IAAM,OAAO,IAAI;IAE/B,qBACE,8OAAC;kBACC,cAAA,8OAAC;;gBACE;8BACD,8OAAC;oBAAO,SAAS;8BAAO;;;;;;;;;;;;;;;;;AAIhC","debugId":null}},
+    {"offset": {"line": 43, "column": 0}, "map": {"version":3,"sources":["file:///Users/anna_yarmolenko/IT/Next/HW/07-routing-nextjs/node_modules/next/navigation.js"],"sourcesContent":["module.exports = require('./dist/client/components/navigation')\n"],"names":[],"mappings":"AAAA,OAAO,OAAO","ignoreList":[0],"debugId":null}}]
+}

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/anna_yarmolenko/IT/Next/HW/07-routing-nextjs/app/notes/filter/layout.tsx"],"sourcesContent":["\nexport default function FilterLayout({\n  children,\n  sidebar,\n}: {\n  children: React.ReactNode;\n  sidebar: React.ReactNode;\n}) {\n  return (\n    <div className={css.container}>\n      <aside className={css.sidebar}>\n        {sidebar}\n      </aside>\n      <main className={css.content}>\n        {children}\n      </main>\n    </div>\n  );\n}"],"names":[],"mappings":";;;;;;AACe,SAAS,aAAa,EACnC,QAAQ,EACR,OAAO,EAIR;IACC,qBACE,8OAAC;QAAI,WAAW,IAAI,SAAS;;0BAC3B,8OAAC;gBAAM,WAAW,IAAI,OAAO;0BAC1B;;;;;;0BAEH,8OAAC;gBAAK,WAAW,IAAI,OAAO;0BACzB;;;;;;;;;;;;AAIT","debugId":null}}]
+}

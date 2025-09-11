@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 30, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/notes/filter/@sidebar/page.module.css [app-rsc] (css module)"],"sourcesContent":["__turbopack_context__.v({\n  \"menuItem\": \"page-module__RL9qBa__menuItem\",\n  \"menuLink\": \"page-module__RL9qBa__menuLink\",\n  \"menuList\": \"page-module__RL9qBa__menuList\",\n});\n"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA"}},
+    {"offset": {"line": 39, "column": 0}, "map": {"version":3,"sources":["file:///Users/anna_yarmolenko/IT/Next/HW/07-routing-nextjs/app/notes/filter/%40sidebar/default.tsx"],"sourcesContent":["import css from './page.module.css';\nimport Link from 'next/link';\nimport { NoteTag } from '@/types/note';\n\nconst tags: (NoteTag | 'All')[] = [\n  'All',\n  'Work',\n  'Personal',\n    'Meeting',\n  'Shopping',\n  'Todo',\n];\n\n\nexport default function SidebarNotes() {\n    return (\n        <ul className={css.menuList}>\n            {tags.map((tag) => (\n                <li key={tag} className={css.menuItem}>\n                    <Link href={`/notes/filter/${tag}`} className={css.menuLink}>\n                        {tag}\n                    </Link>\n                </li>\n            ))}\n        </ul>\n    )\n}\n"],"names":[],"mappings":";;;;;AAAA;AACA;;;;AAGA,MAAM,OAA4B;IAChC;IACA;IACA;IACE;IACF;IACA;CACD;AAGc,SAAS;IACpB,qBACI,8OAAC;QAAG,WAAW,kKAAG,CAAC,QAAQ;kBACtB,KAAK,GAAG,CAAC,CAAC,oBACP,8OAAC;gBAAa,WAAW,kKAAG,CAAC,QAAQ;0BACjC,cAAA,8OAAC,uKAAI;oBAAC,MAAM,CAAC,cAAc,EAAE,KAAK;oBAAE,WAAW,kKAAG,CAAC,QAAQ;8BACtD;;;;;;eAFA;;;;;;;;;;AAQzB","debugId":null}}]
+}
