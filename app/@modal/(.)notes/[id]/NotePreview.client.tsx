@@ -1,39 +1,44 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { fetchNoteById } from '@/lib/api';
-import css from './NotePreview.module.css';
-import { type Note } from '@/types/note';
+import { useRouter } from "next/navigation";
+import { useQuery } from "@tanstack/react-query";
+import { fetchNoteById } from "@/lib/api";
+import css from "./NotePreview.module.css";
+import Modal from "@/components/Modal/Modal";
 
 type Props = {
   id: string;
-  onBack: () => void;
 };
 
-export default function NotePreview({ id, onBack }: Props) {
-  const [note, setNote] = useState<Note | null>(null);
+export default function NotePreview({ id }: Props) {
+  const router = useRouter();
 
-  useEffect(() => {
-    fetchNoteById(id).then(setNote);
-  }, [id]);
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["note", id],
+    queryFn: () => fetchNoteById(id),
+    refetchOnMount: false,
+  });
 
-  if (!note) return null;
+  if (isLoading) return <p>Loading, please wait...</p>;
+  if (error || !data) return <p>Something went wrong.</p>;
 
   return (
-    <div className={css.container}>
-      <div className={css.item}>
-        <div className={css.header}>
-          <h2>{note.title}</h2>
-          <span className={css.tag}>{note.tag}</span>
+    <Modal onClose={() => router.back()}>
+      <div className={css.container}>
+        <div className={css.item}>
+          <div className={css.header}>
+            <h2>{data.title}</h2>
+            <span className={css.tag}>{data.tag}</span>
+          </div>
+          <p className={css.content}>{data.content}</p>
+          <p className={css.date}>
+            {new Date(data.createdAt).toLocaleString()}
+          </p>
+          <button className={css.backBtn} onClick={() => router.back()}>
+            ← Back
+          </button>
         </div>
-        <p className={css.content}>{note.content}</p>
-        <p className={css.date}>
-          {new Date(note.createdAt).toLocaleString()}
-        </p>
-        <button className={css.backBtn} onClick={onBack}>
-          ← Back
-        </button>
       </div>
-    </div>
+    </Modal>
   );
 }
